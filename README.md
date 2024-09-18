@@ -1,5 +1,5 @@
 # Proyecto_TC1031
-# Programación de estructuras de datos y algoritmos fundamentales
+## Programación de estructuras de datos y algoritmos fundamentales
 
 ![image](https://github.com/user-attachments/assets/9dc1b9d4-e1ed-4186-bcc2-cb3ed48611d9)
 
