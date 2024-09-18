@@ -1,14 +1,15 @@
 # Proyecto_TC1031
-Programación de estructuras de datos y algoritmos fundamentales
+# Programación de estructuras de datos y algoritmos fundamentales
 
 ![image](https://github.com/user-attachments/assets/9dc1b9d4-e1ed-4186-bcc2-cb3ed48611d9)
 
+============================================================================================
 
 Este es un programa que busca una solución a un porblema constante que encuentran los jugadores
-del popular juego de "Minecraft".
+del popular juego de *"Minecraft"*.
 La mayoría de jugadores se cruza con el problema de tener tanto el inventario como los 
 almacenes o cofres desordenados, lo que provoca que no encuentren los materiales ni bloques
-la mayoría del tiempo, así mismo al ser un tipo de juego "Sandbox" la cantidad de objetos como
+la mayoría del tiempo, así mismo al ser un tipo de juego *"Sandbox"* la cantidad de objetos como
 bloques, objetos, herramientas, materiales, consumibles, entre otros es infinita así como la
 capacidad de almacenamiento que el jugador puede tener. También muchos jugadores se encuentran
 en la pereza de realizar la organización de forma manual.
