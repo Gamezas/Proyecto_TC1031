@@ -3,8 +3,6 @@
 
 ![image](https://github.com/user-attachments/assets/9dc1b9d4-e1ed-4186-bcc2-cb3ed48611d9)
 
-============================================================================================
-
 Este es un programa que busca una solución a un porblema constante que encuentran los jugadores
 del popular juego de *"Minecraft"*.
 La mayoría de jugadores se cruza con el problema de tener tanto el inventario como los 
