@@ -28,8 +28,8 @@ class Sort
     private:
         void swap(vector <T>&, int, int);
         void copyArray(vector<T>&, vector<T>&, int, int);
-	    void mergeArray(vector<T>&, vector<T>&, int, int, int);
-	    void mergeSplit(vector<T>&, vector<T>&, int, int);
+	void mergeArray(vector<T>&, vector<T>&, int, int, int);
+	void mergeSplit(vector<T>&, vector<T>&, int, int);
     
     public:
         vector<T> mergeSort(const vector<T>&);
