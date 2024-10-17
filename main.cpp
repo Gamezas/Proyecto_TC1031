@@ -15,6 +15,7 @@
 #include <vector>
 #include "sort.h"
 #include "inventory.h"
+#include "list.h"
 
 using namespace std;
 
@@ -33,8 +34,8 @@ string arrayToString(const vector<T> &v) {
 
 int main()
 {
-    cout << "Bienvenido a Minecraft Cheft Sorting" << endl <<
-    "Porfavor ingresa el numero de la opción que más te interese" << endl <<
+    cout << "Bienvenido a Minecraft Chest Sorting" << endl <<
+    "Porfavor ingresa el numero de la opcion que mas te interese" << endl <<
     "1. Modo de prueba \n2. Introducir un inventario\n3. Salir" << endl;
     int caso;
     cin >> caso;
@@ -44,7 +45,7 @@ int main()
     {
         case 1:
         {
-            Inventory inventario;
+            Inventory<int> inventario;
             vector <int> ordenado = sort.mergeSort(inventario.getHotbar());
             cout << arrayToString(ordenado);
 
@@ -53,7 +54,7 @@ int main()
 
         case 2:
         {
-            vector<int> playerhb(9);
+            List<int> playerhb;
             int slot;
             cout << "Ingresa el primer valor de tu hotbar" << endl <<
             "Recuera que los valores de los bloques van de 0 hasta 64" << endl;
@@ -65,6 +66,7 @@ int main()
                 endl << "Vuelve a intentarlo" << endl;
                 cin >> slot;
             }
+            playerhb.insertion(slot);
         
             for(int i = 1; i < 9; i++)
             {
@@ -78,11 +80,11 @@ int main()
                     cin >> slot;
                 }
 
-                playerhb[i] = slot;
+                playerhb.insertion(slot);
 
             }
             
-            Inventory inventario(playerhb);
+            Inventory<int> inventario(playerhb);
             vector <int> ordenado = sort.mergeSort(inventario.getHotbar());
             cout << arrayToString(ordenado);
             break;
@@ -94,5 +96,6 @@ int main()
             break;
         }
     }
+    
     return 0;
 }
