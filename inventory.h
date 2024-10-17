@@ -14,9 +14,11 @@
 
 #include <iostream>
 #include <vector>
+#include "list.h"
 
 using namespace std;
 
+template <class T>
 class Inventory
 {
     private:
@@ -24,40 +26,52 @@ class Inventory
 
     public:
         Inventory();
-        Inventory(vector<int>& vector);
+        Inventory(List<T> &lista);
         Inventory(Inventory& other);
 
         void setHotbar(vector <int>);
         vector<int> getHotbar();
 };
 
-
-Inventory::Inventory()
+template <class T>
+Inventory<T>::Inventory()
 {
-    vector <int> vect = {9,3,4,2,5,8,6,7,1};
+    vector <int> vect = {1,3,2,4,6,5,9,7,8};
     hotbar = vect;
 }
 
-Inventory::Inventory(vector<int>& vector)
+template <class T>
+Inventory<T>::Inventory(List<T> &lista) 
 {
-    hotbar = vector;
+    vector <int> vect;
+    Nodo<T> *aqui = lista.getHead();
+   
+    while (aqui != nullptr)
+    {
+        vect.push_back(aqui -> getDato());
+        aqui = aqui -> getNext();
+    }   
+
+
+    hotbar = vect;
 }
 
-Inventory::Inventory(Inventory& other)
+template <class T>
+Inventory<T>::Inventory(Inventory& other)
 {
     hotbar = other.getHotbar();
 }
 
-vector<int> Inventory::getHotbar()
+template <class T>
+vector<int> Inventory<T>::getHotbar()
 {
     return hotbar;
 }
 
-void Inventory::setHotbar(vector <int> vect)
+template <class T>
+void Inventory<T>::setHotbar(vector <int> vect)
 {
     hotbar = vect;
 }
-
-// Debería añadir un destructor?
 
 #endif
