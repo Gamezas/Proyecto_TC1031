@@ -1,30 +1,47 @@
-# Proyecto_TC1031
-## Programación de estructuras de datos y algoritmos fundamentales
-
 ![image](https://github.com/user-attachments/assets/9dc1b9d4-e1ed-4186-bcc2-cb3ed48611d9)
 
-Este es un programa que busca una solución a un porblema constante que encuentran los jugadores
-del popular juego de *"Minecraft"*.
-La mayoría de jugadores se cruza con el problema de tener tanto el inventario como los 
-almacenes o cofres desordenados, lo que provoca que no encuentren los materiales ni bloques
-la mayoría del tiempo, así mismo al ser un tipo de juego *"Sandbox"* la cantidad de objetos como
-bloques, objetos, herramientas, materiales, consumibles, entre otros es infinita así como la
-capacidad de almacenamiento que el jugador puede tener. También muchos jugadores se encuentran
-en la pereza de realizar la organización de forma manual.
+# Proyecto: Minecraft Chest Sorting
+Minecraft Chest Sorting busca rexxolver uno de los problemas que más seguido se encuentran los jugadores
+del juego Minecraft, que el inventario y los cofres se encuentran desordenados.
 
-Este proyecto busca permitir la organización de dichos objetos a una menor escala para permitir
-que los jugadores puedan mantener sus almacenes ordenados todo con la facilidad de un algoritmo
-al igual que en el videojuego de Terraria.
+## Descripción del avance 1
+En la versión actuual del documento se integra el sistema de listas enlazadas simples, se elige de esta forma ya
+que el sistema no necesita saber cuál era la posición anterior, únicamente la cabeza, la cola y el valor siguiente del nodo actual. También se corriguen los errores de la entrega anterior
 
-Aquí se utilizan algoritmos de ordenamiento, el sistema pide al usuario conocer un poco de lo
-que hay en su inventario, después de esto se hace una organización de dicho inventario. En este
-avance actualemnte solo se ordenan bloques en cantidad, aunque se busca que se pueden también 
-ordenar en tipos en un futuro, así como la implementación de la capacidad de organizar materiales.
+## Instrucciones para compilar el avance de proyecto
+Ejecuta el siguiente comando en la terminal:
 
-1er avance
-En este avance se ha iniciado por un sistema que pregunte la cantidad de bloques que tiene el
-jugador en su "Hotbar" la cuál puede almacenar hasta 9 tipos de objetos diferentes, cada tipo de
-bloque se puede almacenar en si mismo hasta 64 veces antes de  tener que utilizar un segundo espacio
-después el algoritmo ordena dichos bloques en cuanto a la cantidad, aún no se ha implementado la
-psoibilidad de ordenar acorde a el tipo de bloque, así como no se ha añadido el inventario completo
-del jugador que tiene un total de 36 espacios sin contar armadura ni segunda mano.
+`g++ main.cpp -o primer_avance` 
+
+## Instrucciones para ejecutar el avance de proyecto
+Ejecuta el siguiente comando en la terminal:
+
+`./primer_avance` 
+
+## Descripción de las entradas del avance de proyecto
+Para el proyecto se necesita un primera entrada para seleccionar una de las opciones del menú.
+
+Eligiendo 1 el sistema ejecutará un caso de prueba.
+Eligiendo 2 el sistema ejecutará el programa normal, pidiendo al usuraio 9 entredas de valores input entre el 0 al 64
+Eligiendo 3 el sistema concluirá
+
+## Descripción de las salidas del avance de proyecto
+Las salidas son las entradas de forma ordenadas del menor al mayor
+
+## Desarrollo de competencias
+
+### SICT0301: Evalúa los componentes
+#### Hace un análisis de complejidad correcto y completo para los algoritmos de ordenamiento usados en el programa.
+El sistema de ordenaiento Merge permite una solución de tipo O(n log(n)) en promedio así como en su peor caso, esto permite que se mantenga una velocidad constante en el sistema y se pueda escalar de 9 valores a 36 que es el obejtivo final.
+
+#### Hace un análisis de complejidad correcto y completo de todas las estructuras de datos y cada uno de sus usos en el programa.
+El sistema de estructuras de datos de listas simples es el ideal ya que doblemente ligado o circular si bien pueden funcionar en el sistema no se le mucho uso a lo que los diferencia del simple, pues el algoritmo unicamente necesita saber cuál es nodo siguiente y no tiene un uso necesario en el nodo anterior.
+
+### SICT0302: Toma decisiones
+#### Selecciona un algoritmo de ordenamiento adecuado al problema y lo usa correctamente.
+En este sistema se selecciona el sistema de ordenamiento merge ya que permite una solución O(n log(n)) en la mayoría de los casos, esto es útil ya que actualmente se ordena únicamente la hotbar del jugador el cuál contiene 9  espacios y la velocidad no cambia entre el mejor o peor de los casos, sigue siendo rápida. Cuado 
+se escale el programa a almacenar 36 espacios merge mantendrá la velocidad a comparación de otros métodos de
+ordenamiento.
+
+#### Selecciona una estructura de datos adecuada al problema y la usa correctamente.
+El sistema únicamente enecsita conocer el incio y el final de la lista, así como el nodo siguiente del que esta actualmente, no necesita saber el nodo anterior ni cliclar la lista, es por esto que la lista ligada simple es excelente para el sistema.
