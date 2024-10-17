@@ -28,8 +28,8 @@ class Sort
     private:
         void swap(vector <T>&, int, int);
         void copyArray(vector<T>&, vector<T>&, int, int);
-	void mergeArray(vector<T>&, vector<T>&, int, int, int);
-	void mergeSplit(vector<T>&, vector<T>&, int, int);
+	    void mergeArray(vector<T>&, vector<T>&, int, int, int);
+	    void mergeSplit(vector<T>&, vector<T>&, int, int);
     
     public:
         vector<T> mergeSort(const vector<T>&);
@@ -59,7 +59,6 @@ void Sort<T>::mergeArray(vector<T>&A, vector<T> &B, int low, int mid, int high)
 	int i_izquierda = low;
 	int i_derecha = mid + 1;
 
-	//Ciclo para ordenar en B, la parte izquierda de A con respectp a la parte derecha de A
 	while (i_izquierda <= mid && i_derecha <= high){
 		if (A[i_izquierda] < A[i_derecha]){
 			B[i_ordenado] = A[i_izquierda];
@@ -93,11 +92,8 @@ void Sort<T>::mergeSplit(vector<T> &A, vector<T> &B, int low, int high)
 	if(low < high)
     {
 		int mid = (low + high) / 2;
-		//Calcular la mitad
 		mergeSplit(A, B, low, mid);
-		// Calcular la izquierda
 		mergeSplit(A, B, mid + 1, high);
-		// Calcular la derecha
 		mergeArray(A, B, low, mid, high);
 	}
 	
