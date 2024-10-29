@@ -11,12 +11,12 @@ que el sistema no necesita saber cuál era la posición anterior, únicamente la
 ## Instrucciones para compilar el avance de proyecto
 Ejecuta el siguiente comando en la terminal:
 
-`g++ main.cpp -o primer_avance` 
+`g++ -std=c++11 main.cpp` 
 
 ## Instrucciones para ejecutar el avance de proyecto
 Ejecuta el siguiente comando en la terminal:
 
-`./primer_avance` 
+`a.exe` ó `a`
 
 ## Descripción de las entradas del avance de proyecto
 Para el proyecto se necesita un primera entrada para seleccionar una de las opciones del menú.
