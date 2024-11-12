@@ -296,17 +296,17 @@ int main()
 
             std::string salida = inventario.printHB();
 
-            ofstream archivoSalida("salida.txt");
+            ofstream SalidaS("salida.txt");
 
             // Verificar si el archivo se abrió correctamente
-            if (!archivoSalida) {
+            if (!SalidaS) {
             cerr << "No se pudo abrir el archivo para escritura." << endl;
             return 1;
             }
             
-            archivoSalida << salida;
+            SalidaS << salida;
 
-            archivoSalida.close();
+            SalidaS.close();
         }
         case 2:
             std::cout << "Excelente dia";
