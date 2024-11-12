@@ -5,7 +5,7 @@ Para la tercera entrega no hay actualizacion en read me, se planean hacer de for
 Esta entrega sin embargo actualiza todo el código por completo y retirando el archivo "sort.h" e integrando sus contenidos a "list.h". El código también
 ya tiene un catálogo con tags que permite al identificación de objetos y no solamente números ordenados.
 
-##Como utilizar el código
+## Como utilizar el código
 En esta entrega se hace lectura de archivos, por lo que para pruebas se deben realizar en el archivo "entrada.txt" de la siguiente forma
 El primer valor indica si el programa se ejecutará o no, 1. se ejecuta 2. No lo hace
 El segundo indica la cantidad de objetos que van a haber en la lista a ordenar este va de 1 a 9 si se introduce un valor no válido se le avisará al usuario,
