@@ -1,6 +1,6 @@
 ![image](https://github.com/user-attachments/assets/9dc1b9d4-e1ed-4186-bcc2-cb3ed48611d9)
 
-# Tercera netrega
+# Tercera entrega
 Para la tercera entrega no hay actualizacion en read me, se planean hacer de forma corecta junto con el analisis de complejidad para la entrega final.
 Esta entrega sin embargo actualiza todo el código por completo y retirando el archivo "sort.h" e integrando sus contenidos a "list.h". El código también
 ya tiene un catálogo con tags que permite al identificación de objetos y no solamente números ordenados.
