@@ -73,7 +73,15 @@ seguridad el código vuelve a preguntar, si se busca realizar una prueba de esto
 se recomienda elegirlo en el archivo de entrada de la siguiente forma Ejemplo "... 5 1 64 5 3 12 5 5 3 ..."
 
 ## Salidas
-Todas las salidas del programa serán registradas en el arhcivo de texto "salida.txt" y se encontraran ordenados de menor a mayor en cuanto a cantidad, dando prioridad a los objetos del catálogo 1
+Todas las salidas del programa serán registradas en el arhcivo de texto "salida.txt" y se encontraran ordenados de menor a mayor en cuanto a cantidad, dando prioridad a los objetos del catálogo 1.
+
+Así mismo se compila el archivo de la siguiente forma:
+
+`g++ -std=c++11 main.cpp` 
+
+Y Ejecuta de la siguiente forma:
+
+`a.exe` ó `a`
 
 Se menciona nuevamente que todas las selecciones tienen medidas de seguridad en caso que se coloque un número fuera de rango, por lo que si se busca probar estas medidas de seguridad, se recomienda siempre colocar depue´s un valor dentro del rango o que sea en el catálogo Ejemplo: "... 5 1 -1 15 ..." ó "... 8 1 1 2 ..."
 
