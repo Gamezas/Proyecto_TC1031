@@ -1,7 +1,84 @@
 ![image](https://github.com/user-attachments/assets/9dc1b9d4-e1ed-4186-bcc2-cb3ed48611d9)
 
+# Tercera netrega
+Para la tercera entrega no hay actualizacion en read me, se planean hacer de forma corecta junto con el analisis de complejidad para la entrega final.
+Esta entrega sin embargo actualiza todo el código por completo y retirando el archivo "sort.h" e integrando sus contenidos a "list.h". El código también
+ya tiene un catálogo con tags que permite al identificación de objetos y no solamente números ordenados.
+
+##Como utilizar el código
+En esta entrega se hace lectura de archivos, por lo que para pruebas se deben realizar en el archivo "entrada.txt" de la siguiente forma
+El primer valor indica si el programa se ejecutará o no, 1. se ejecuta 2. No lo hace
+El segundo indica la cantidad de objetos que van a haber en la lista a ordenar este va de 1 a 9 si se introduce un valor no válido se le avisará al usuario,
+por lo que si se escribe un caso de prueba para exceder esto se recomiendo hacerlo como "1 10 4 ..."
+
+Los siguientes valores entran en los 5 catálogos diferentes
+
+### Catálogo 1
+Todos los valores en este catálogo su cantidad es definida a 1 automáticamente para seguir las reglas del juego, este catálogo hay 5 opciones
+1. Espada
+2. Pico
+3. Hacha
+4. Pala
+5. Hazada
+
+Para introducir una de estas opciones en el archivo de entrada se recomiend hacerlo de la siguiente forma Ejemplo: "... 1 1 1 2 1 3 1 5 ..."
+
+### Catálogo 2
+Todos los valores en este catálogo entran en un rango del 1 al 64 y son seleccionadas con el número 2, en este catálogo hay 5 opciones
+1. Pan
+2. Manzana
+3. Zanahoria
+4. Papa
+5. Pescado
+
+Para este catálogo al ser stackable (puede haber más de 1 en un mismo slot) hay que colocar la cantidad que habra en el slot, si esta pasa de rango, por
+seguridad el código vuelve a preguntar, si se busca realizar una prueba de esto se recomienda hacerlo de la siguiente forma "... 2 1 -1 15 ..."
+se recomienda elegirlo en el archivo de entrada de la siguiente forma Ejemplo "... 2 1 64 2 3 12 2 5 3 ..."
+
+### Catálogo 3
+Todos los valores en este catálogo entran en un rango del 1 al 16, respetando las reglas del juego y son seleccionadas con el número 3, en este catálogo hay 4 opciones
+1. Perlas de Enderman
+2. Huevo
+3. Bolas de Nieve
+4. Carteles
+
+Para este catálogo al ser stackable (puede haber más de 1 en un mismo slot) hay que colocar la cantidad que habra en el slot, si esta pasa de rango, por
+seguridad el código vuelve a preguntar, si se busca realizar una prueba de esto se recomienda hacerlo de la siguiente forma "... 3 1 -1 15 ..."
+se recomienda elegirlo en el archivo de entrada de la siguiente forma Ejemplo "... 3 1 12 3 3 1 3 4 3 ..."
+
+### Catálogo 4
+Todos los valores en este catálogo entran en un rango del 1 al 64 y son seleccionadas con el número 4, en este catálogo hay 6 opciones
+1. Pasto
+2. Tierra
+3. Guijarro
+4. Piedra
+5. Madera
+6. Tablones de Madera
+
+Para este catálogo al ser stackable (puede haber más de 1 en un mismo slot) hay que colocar la cantidad que habra en el slot, si esta pasa de rango, por
+seguridad el código vuelve a preguntar, si se busca realizar una prueba de esto se recomienda hacerlo de la siguiente forma "... 4 1 -1 15 ..."
+se recomienda elegirlo en el archivo de entrada de la siguiente forma Ejemplo "... 4 1 64 4 3 12 4 5 3 ..."
+
+### catálogo 5
+Todos los valores en este catálogo entran en un rango del 1 al 64 y son seleccionadas con el número 5, en este catálogo hay 6 opciones
+1. Palos
+2. Carbón
+3. Hierro
+4. Oro
+5. Restone
+6. Diamantes
+
+Para este catálogo al ser stackable (puede haber más de 1 en un mismo slot) hay que colocar la cantidad que habra en el slot, si esta pasa de rango, por
+seguridad el código vuelve a preguntar, si se busca realizar una prueba de esto se recomienda hacerlo de la siguiente forma "... 5 1 -1 15 ..."
+se recomienda elegirlo en el archivo de entrada de la siguiente forma Ejemplo "... 5 1 64 5 3 12 5 5 3 ..."
+
+## Salidas
+Todas las salidas del programa serán registradas en el arhcivo de texto "salida.txt" y se encontraran ordenados de menor a mayor en cuanto a cantidad, dando prioridad a los objetos del catálogo 1
+
+Se menciona nuevamente que todas las selecciones tienen medidas de seguridad en caso que se coloque un número fuera de rango, por lo que si se busca probar estas medidas de seguridad, se recomienda siempre colocar depue´s un valor dentro del rango o que sea en el catálogo Ejemplo: "... 5 1 -1 15 ..." ó "... 8 1 1 2 ..."
+
 # Proyecto: Minecraft Chest Sorting
-Minecraft Chest Sorting busca rexxolver uno de los problemas que más seguido se encuentran los jugadores
+Minecraft Chest Sorting busca resolver uno de los problemas que más seguido se encuentran los jugadores
 del juego Minecraft, que el inventario y los cofres se encuentran desordenados.
 
 ## Descripción del avance 1
