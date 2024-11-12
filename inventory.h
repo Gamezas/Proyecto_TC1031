@@ -22,56 +22,56 @@ template <class T>
 class Inventory
 {
     private:
-        vector<int> hotbar;
+        List<T> hotbar;
 
     public:
-        Inventory();
         Inventory(List<T> &lista);
         Inventory(Inventory& other);
 
-        void setHotbar(vector <int>);
-        vector<int> getHotbar();
+        void setHotbar(List<T> &other);
+        List<T> getHotbar();
+
+        std::string printHB();
 };
 
 template <class T>
-Inventory<T>::Inventory()
+Inventory<T>::Inventory(List<T> &lista)
 {
-    vector <int> vect = {1,3,2,4,6,5,9,7,8};
-    hotbar = vect;
+    hotbar = lista;
 }
 
 template <class T>
-Inventory<T>::Inventory(List<T> &lista) 
-{
-    vector <int> vect;
-    Nodo<T> *aqui = lista.getHead();
-   
-    while (aqui != nullptr)
-    {
-        vect.push_back(aqui -> getDato());
-        aqui = aqui -> getNext();
-    }   
-
-
-    hotbar = vect;
-}
-
-template <class T>
-Inventory<T>::Inventory(Inventory& other)
+Inventory<T>::Inventory(Inventory<T> &other)
 {
     hotbar = other.getHotbar();
 }
 
 template <class T>
-vector<int> Inventory<T>::getHotbar()
+List<T> Inventory<T>::getHotbar()
 {
     return hotbar;
 }
 
 template <class T>
-void Inventory<T>::setHotbar(vector <int> vect)
+void Inventory<T>::setHotbar(List<T> &other)
 {
-    hotbar = vect;
+    hotbar = other;
+}
+
+template <class T>
+std::string Inventory<T>::printHB()
+{
+    std::stringstream aux;
+    Nodo<T>* aqui = hotbar.getHead();
+    aux << aqui->getNodeInfo(aqui);
+    aqui = aqui -> siguiente;
+    if(aqui == hotbar.getHead()) cout << "Crash\n";
+    while(aqui != hotbar.getHead())
+    {
+        aux << aqui->getNodeInfo(aqui);
+        aqui = aqui ->siguiente;
+    }
+    return aux.str();
 }
 
 #endif
