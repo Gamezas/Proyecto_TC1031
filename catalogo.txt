@@ -1,0 +1,26 @@
+11 Espada
+12 Pico
+13 Hacha
+14 Pala
+15 Hazada
+21 Pan
+22 Manzana
+23 Zanahoria
+24 Papa
+25 Pescado
+31 Perla de Ender
+32 Huevo
+33 Bola de nieve
+34 Cartel
+41 Pasto
+42 Tierra
+43 Guijarro
+44 Piedra
+45 Madera
+46 Tablones de madera
+51 Palo
+52 Carbon
+53 Hierro
+54 Oro
+55 Redstone
+56 Diamante
