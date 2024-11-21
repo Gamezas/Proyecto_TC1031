@@ -1,4 +1,0 @@
-item: Pico Cantidad: 1
-item: Espada Cantidad: 1
-item: Zanahoria Cantidad: 32
-item: Pasto Cantidad: 64
