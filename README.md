@@ -50,10 +50,10 @@ En esta versión la salida del programa es un archivo de texto llamado "salida.t
 
 ### SICT0301: Evalúa los componentes
 #### Hace un análisis de complejidad correcto y completo para los algoritmos de ordenamiento usados en el programa.
-Se ha elegido utilizar el método de ordenamiento "Merge" el cuál se mantiene constante en todo momento al tener un tiempo de compegidad de Θ(n log(n)) en su caso promedio y su peor caso y en su mejor caso Ω(n log(n)) también cuenta con una complejidad de espacio de O(n), al tener en cuenta estos atributos "Merge" destaca rápidamente principalmente porque el sistema si tendrá un límite de objetos que deberá ordenar, en este caso 9, por lo que en la ejecución del programa no se notará de forma relevante ninguno de los 3 casos y se tomará principal ventaja de su complejidad de espacio al cuál es justa.
+Se ha elegido utilizar el método de ordenamiento "Merge" el cuál se mantiene constante en todo momento al tener un tiempo de compegidad de Θ(n log(n)) en su caso promedio y su peor caso y en su mejor caso Ω(n log(n)) también cuenta con una complejidad de espacio de O(n), al tener en cuenta estos atributos "Merge" destaca rápidamente principalmente porque el sistema si tendrá un límite de objetos que deberá ordenar, en este caso 9, por lo que en la ejecución del programa no se notará de forma relevante ninguno de los 3 casos y se tomará principal ventaja de su complejidad de espacio al cuál es justa para el tipo de programa que es.
 
 #### Hace un análisis de complejidad correcto y completo de todas las estructuras de datos y cada uno de sus usos en el programa.
-El programa utiliza un sistema de estructura de datos de lista ligada cíclica, se toma la ventaja que en ningún momento los nodos de la lista tienen un apuntador NULL, lo que permite que el programa no se estanque a la hora de re ordenar la lista con ayuda del "Merge" ya que recordemos se ordenan primero los apuntadores en un vector y con ayuda de ese mismo los apuntadores de la lista. Así mimso la lista ligada cíclica nos ofrece una constancia de O(n) en todos sus casos e incluso en sus insertions que son los que más utiliza, permitiendo que el programa se mantenga eficaz.
+El programa utiliza un sistema de estructura de datos de lista ligada cíclica, se toma la ventaja que en ningún momento los nodos de la lista tienen un apuntador NULL, lo que permite que el programa no se estanque a la hora de re ordenar la lista con ayuda del "Merge" ya que recordemos se ordenan primero los apuntadores en un vector y con ayuda de ese mismo los apuntadores de la lista. Así mimso la lista ligada cíclica nos ofrece una constancia de O(n) en todos sus casos e incluso en sus insertions que son los que más utilizan, permitiendo que el programa se mantenga eficaz en cuanto a la estructura de datos.
 
 #### Hace un análisis de complejidad correcto y completo para todos los demás componentes del programa y determina la complejidad final del programa.
 En análisis de complejidad de todas sus funciones se encuentran como comentarios dentro del código. La complejidad final del programa es: 
@@ -62,7 +62,24 @@ En análisis de complejidad de todas sus funciones se encuentran como comentario
 #### Selecciona un algoritmo de ordenamiento adecuado al problema y lo usa correctamente.
 Algoritmo dde ordenamiendo: Merge Sort
 Class Sort()
-CopyArray: Esta función recibe 2 listas y lo que permite es que el vector A sea identico a la vector B
+MergeSort() (linea 202) En esta función el programa recibe un vector de apuntadores a nodos de una lista ligada ciclica, la funcón crea dos vectores nuevos, una copia del vector dado y otra que solo es inicializada al tamaño del vactor copia y la función MergeSplit es llamada dando un valor 0 como valor mínimo y el tamaño del vector - 1 como indicador máximo.
+
+MergeSplit() (linea 189) En esta función se crea un if que funge como caso base, ya que esta función esta diseñada como una función recursiva, su objetivo es llamarse multiples veces y en cada ocación ir dividiendo el vector en 2 hasta quedar únicamente dos valores, estos valores son enviados a la función mergeArray() para ser ordenados una vez ordenados esos valores terminan la ejecución recursiva y se vuelven a mandar a ordenar junto otros dos valores ordenados de la misma manera, así sucesivamente hasta que el vector vuelve a ser uno solo pero esta vez con los valores ordenados de menor a mayor.
+
+MergeArray() (linea 157) En esta función se reciben dos vectores (A y B) y 3 valores int (low, mid y high), esta función se hace uso de 3 ciclos while que ordenaran y revisarán que los vectores esten ordenados correctamente así mismo se crean 3 instancias i (i_izquierda, i_derecha e i_ordenado) que permitirán conocer que posición del vector estamos ordenando.
+Primer while (i_izquierda <= mid && i_derecha <= high)
+En este while se busca recorrer el vector mientras que el valor de i_izquierda sea menor o igual que mid y que i_derecha sea menor o igual que el valor high, 
+
+
+if (A[i_izquierda] -> cant < A[i_derecha] -> cant){
+			B[i_ordenado] = A[i_izquierda];
+			i_izquierda++;
+		}
+		else{
+			B[i_ordenado] = A[i_derecha];
+			i_derecha++;
+		}
+		i_ordenado++;
 
 #### Selecciona una estructura de datos adecuada al problema y la usa correctamente.
 Si lograste este criterio anteriormente, copia aquí tu argumentación. Si no, ésta es una nueva oportunidad para lograrlo. Escribe aquí tu aprendizaje y tus argumentos sobre por qué consideras que ahora ya has desarrrollado este criterio y dónde se puede observar el desarrollo que mencionas.
