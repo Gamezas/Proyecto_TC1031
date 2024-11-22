@@ -50,17 +50,19 @@ En esta versión la salida del programa es un archivo de texto llamado "salida.t
 
 ### SICT0301: Evalúa los componentes
 #### Hace un análisis de complejidad correcto y completo para los algoritmos de ordenamiento usados en el programa.
-Si lograste este criterio anteriormente, copia aquí tu argumentación. Si no, ésta es una nueva oportunidad para lograrlo. Escribe aquí tu aprendizaje y tus argumentos sobre por qué consideras que ahora ya has desarrrollado este criterio y dónde se puede observar el desarrollo que mencionas.
+Se ha elegido utilizar el método de ordenamiento "Merge" el cuál se mantiene constante en todo momento al tener un tiempo de compegidad de Θ(n log(n)) en su caso promedio y su peor caso y en su mejor caso Ω(n log(n)) también cuenta con una complejidad de espacio de O(n), al tener en cuenta estos atributos "Merge" destaca rápidamente principalmente porque el sistema si tendrá un límite de objetos que deberá ordenar, en este caso 9, por lo que en la ejecución del programa no se notará de forma relevante ninguno de los 3 casos y se tomará principal ventaja de su complejidad de espacio al cuál es justa.
 
 #### Hace un análisis de complejidad correcto y completo de todas las estructuras de datos y cada uno de sus usos en el programa.
-Si lograste este criterio anteriormente, copia aquí tu argumentación. Si no, ésta es una nueva oportunidad para lograrlo. Escribe aquí tu aprendizaje y tus argumentos sobre por qué consideras que ahora ya has desarrrollado este criterio y dónde se puede observar el desarrollo que mencionas.
+El programa utiliza un sistema de estructura de datos de lista ligada cíclica, se toma la ventaja que en ningún momento los nodos de la lista tienen un apuntador NULL, lo que permite que el programa no se estanque a la hora de re ordenar la lista con ayuda del "Merge" ya que recordemos se ordenan primero los apuntadores en un vector y con ayuda de ese mismo los apuntadores de la lista. Así mimso la lista ligada cíclica nos ofrece una constancia de O(n) en todos sus casos e incluso en sus insertions que son los que más utiliza, permitiendo que el programa se mantenga eficaz.
 
 #### Hace un análisis de complejidad correcto y completo para todos los demás componentes del programa y determina la complejidad final del programa.
 En análisis de complejidad de todas sus funciones se encuentran como comentarios dentro del código. La complejidad final del programa es: 
 
 ### SICT0302: Toma decisiones
 #### Selecciona un algoritmo de ordenamiento adecuado al problema y lo usa correctamente.
-Se ha elegido utilizar el método de ordenamiento "Merge" el cuál se mantiene constante en todo momento al tener un tiempo de compegidad de Θ(n log(n)) en su caso promedio y su peor caso y en su mejor caso Ω(n log(n)) también cuenta con una complejidad de espacio de O(n), al tener en cuenta estos atributos "Merge" destaca rápidamente principalmente porque el sistema si tendrá un límite de objetos que deberá ordenar, en este caso 9, por lo que en la ejecución del programa no se notará de forma relevante ninguno de los 3 casos y se tomará principal ventaja de su complejidad de espacio al cuál es justa.
+Algoritmo dde ordenamiendo: Merge Sort
+Class Sort()
+CopyArray: Esta función recibe 2 listas y lo que permite es que el vector A sea identico a la vector B
 
 #### Selecciona una estructura de datos adecuada al problema y la usa correctamente.
 Si lograste este criterio anteriormente, copia aquí tu argumentación. Si no, ésta es una nueva oportunidad para lograrlo. Escribe aquí tu aprendizaje y tus argumentos sobre por qué consideras que ahora ya has desarrrollado este criterio y dónde se puede observar el desarrollo que mencionas.
