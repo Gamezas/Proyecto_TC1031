@@ -56,7 +56,7 @@ Se ha elegido utilizar el método de ordenamiento "Merge" el cuál se mantiene c
 El programa utiliza un sistema de estructura de datos de lista ligada cíclica, se toma la ventaja que en ningún momento los nodos de la lista tienen un apuntador NULL, lo que permite que el programa no se estanque a la hora de re ordenar la lista con ayuda del "Merge" ya que recordemos se ordenan primero los apuntadores en un vector y con ayuda de ese mismo los apuntadores de la lista. Así mimso la lista ligada cíclica nos ofrece una constancia de O(n) en todos sus casos e incluso en sus insertions es O(1) que son los que más utilizan, permitiendo que el programa se mantenga eficaz en cuanto a la estructura de datos.
 
 #### Hace un análisis de complejidad correcto y completo para todos los demás componentes del programa y determina la complejidad final del programa.
-En análisis de complejidad de todas sus funciones se encuentran como comentarios dentro del código. La complejidad final del programa es: 
+En análisis de complejidad de todas sus funciones se encuentran como comentarios dentro del código y se recomienda revisarlo. La complejidad final del programa es: O(n log n) esto se debe a la complejidad del Merge Sort como se mencionó anteriormente.
 
 ### SICT0302: Toma decisiones
 #### Selecciona un algoritmo de ordenamiento adecuado al problema y lo usa correctamente.
