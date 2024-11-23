@@ -19,7 +19,7 @@
 
 using namespace std;
 
-
+//O (n log n) en todos sus casos debido al switch
 int main()
 {
     //O(1)
