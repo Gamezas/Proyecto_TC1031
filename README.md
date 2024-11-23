@@ -48,10 +48,10 @@ En esta versión la salida del programa es un archivo de texto llamado "salida.t
 
 ## Notas
 
-# Compatibilidad con otros sistemas operativos:
+### Compatibilidad con otros sistemas operativos:
 El programa corre correctamente en Windows, sin embargo solamente se ha revisado compatibilidad  de forma teoríca con Mac y Linux, por lo que si llegan a existir porblemas se deberá a porblemas de compatibilidad y no al código mismo, es por eso que se recomienda utilizar un sistema operativo Windows a la hora de ejecución en caso de presentarse errores.
 
-## Análisis de complejidad
+#### Análisis de complejidad
 Se avisa que el análisis de complejidad de cada funión se encuentra dentro del código en forma de comentarios.
 
 ## Desarrollo de competencias
@@ -75,7 +75,7 @@ Se seleccionó la estructura de lista ligada ciclica ya que como la lista ligada
 
 ### SICT0303: Implementa acciones científicas
 #### Implementa mecanismos para consultar información de las estructras correctos.
-# Algoritmo de ordenamiendo: Merge Sort
+### Algoritmo de ordenamiendo: Merge Sort
 Class Sort()
 ```MergeSort()``` (linea 267 list.h) Complejidad: O (n log n) Esto es en todos sus casos debido a la complejidad de la función ```mergeSplit()```
 En esta función el programa recibe un vector de apuntadores a nodos de una lista ligada ciclica, la funcón crea dos vectores nuevos, una copia del vector dado y otra que solo es inicializada al tamaño del vector copia y la función ```MergeSplit()``` es llamada dando un valor 0 como valor mínimo y el tamaño del vector - 1 como indicador máximo.
@@ -95,7 +95,7 @@ Una vez se comcluya cualquiera de estos 3 ciclos se llama a la función ```copyA
 ```CopyArray()``` (linea 185 list.h)Complejidad: Mejor caso O(n) n es la cantidad de iteraciones del bucle, caso promedio O(n), peor caso O(n)
 Esta función sencillamente copia todos los cambios hechos en el vector B al vector A, recordemos que en la primera función se crearon dos vectores un con los datos del vector original (A) y otro vacío con el mismo tamaño que el A (B), todos los cambios han ocurrido en el vector B y esta función esos cambios se ven reflejados en el vector A, ya que será el vector A el que se va a regresar una vez termine el merge sort
 
-# Estructura de datos: lista ligada ciclica.
+### Estructura de datos: lista ligada ciclica.
 
 ```class List``` (linea 27 list.h)
 En esta clase se sostienen dos apuntadores de la clase Nodo que sirven para conocer la cabeza de la lista y su final, también se declara la función ```insertion()``` y ```sorting()``` que son las más importnates de la clase
