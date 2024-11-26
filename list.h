@@ -288,6 +288,8 @@ void List<T>::sorting()
     while(cabeza -> siguiente != head)
     {
         salida.push_back(cabeza);
+        if(cabeza->siguiente == nullptr) break;
+	    //Muchas gracias Arturo <3
         cabeza = cabeza ->siguiente;
     }
     //O(1)
